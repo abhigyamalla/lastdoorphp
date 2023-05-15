@@ -1,15 +1,68 @@
+<!DOCTYPE html>
+
 <?php
 
 require "functions.php";
 require "database.php";
+require "routing.php";
 
 
 
-$db=new DataBase();
-$posts=$db->query("select * from posts where id=2")->fetch(PDO::FETCH_ASSOC);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $id=$_GET['id'];
+// $query="select * from posts where id= ?";
+
+
+// $posts=$db->query($query,[$id])->fetch();
+
+// FETCH ASSOC makes the array into associative array meaning it shows keys example: [id]->1
 
 
 // foreach ($posts as $post) {
 //     echo '<li>' . $post['title'] . '</li>';
 // }
-dd($posts['title']);
+// dd($posts);

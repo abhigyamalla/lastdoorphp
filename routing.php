@@ -29,6 +29,9 @@ $routes=
         '/lastdoorphp/index.php'=>'controller/index.php',
         '/lastdoorphp/about.php'=>'controller/about.php',
         '/lastdoorphp/contact.php'=>'controller/contact.php',
+        '/lastdoorphp/notes.php'=>'controller/notes.php',
+        '/lastdoorphp/note.php'=>'controller/note.php',
+
 
     ];
 

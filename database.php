@@ -1,13 +1,25 @@
 <?php
 // connect to a database
-class DataBase
-{
-    public function query($query)
-    {
-        $dsn = "mysql:host=127.0.0.1;port=3306;dbname=myapp;user=root";
-        $pdo = new PDO($dsn);
-        $statement = $pdo->prepare("$query");
-        $statement->execute();
-        return $statement;
-    }
-}
+        class DataBase
+        {
+        public $connection;
+        public function __construct($config){
+
+          
+           $dsn='mysql:' . http_build_query($config,'',';');
+
+           
+            $this->connection=new PDO($dsn,'root','',[
+               PDO::ATTR_DEFAULT_FETCH_MODE =>PDO::FETCH_ASSOC
+            ]);
+
+        }
+            public function query($query,$params=[])
+            {
+                
+            
+                $statement = $this->connection->prepare("$query");
+                $statement->execute($params);
+                return $statement;
+            }
+        }

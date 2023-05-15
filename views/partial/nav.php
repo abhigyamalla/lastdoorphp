@@ -10,6 +10,7 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a href="index.php" class=" <?=valueIS('/lastdoorphp/index.php') ?"bg-gray-900 text-white":'text-white-300' ?> hover:bg-gray-700  text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
         <a href="about.php" class="<?=valueIS('/lastdoorphp/about.php') ?"bg-gray-900 text-white":'text-white-300' ?>hover:bg-gray-700  text-white block rounded-md px-3 py-2 text-base font-medium ">About</a>
+        <a href="notes.php" class="<?=valueIS('/lastdoorphp/note.php') ?"bg-gray-900 text-white":'text-white-300' ?>hover:bg-gray-700  text-white block rounded-md px-3 py-2 text-base font-medium ">Notes</a>
         <a href="contact.php" class="<?=valueIS('/lastdoorphp/contact.php') ?"bg-gray-900 text-white":'text-white-300' ?>hover:bg-gray-700  text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
              </div>
           </div>
