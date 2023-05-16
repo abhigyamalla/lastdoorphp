@@ -3,6 +3,7 @@
         class DataBase
         {
         public $connection;
+        public $statement;
         public function __construct($config){
 
           
@@ -14,12 +15,33 @@
             ]);
 
         }
-            public function query($query,$params=[])
+        public function query($query, $params = []) {
+            $this->statement = $this->connection->prepare($query);
+            $this->statement->execute($params);
+            return $this;
+        }
+
+    public function get(){
+        return $this->statement->FetchAll();
+    } 
+        
+            public function find(){
+                return $this->statement->fetch();
+
+            }
+            public function findorfail()
             {
-                
-            
-                $statement = $this->connection->prepare("$query");
-                $statement->execute($params);
-                return $statement;
+                $result=$this->find();
+                if(!$result){
+                    abort();
+                }
+                return $result;
             }
         }
+
+
+
+
+        // public function get(){
+        //     return $this->statement->FetchAll();
+        // } need to understand the implication of "$this" more 

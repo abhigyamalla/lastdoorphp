@@ -7,8 +7,14 @@ function dd($value){
    die();
 }
 
-echo $_SERVER['REQUEST_URI'];
+// echo $_SERVER['REQUEST_URI'];
 
 function valueIS($value){
     return $_SERVER["REQUEST_URI"]===$value;
+}
+
+function authorize($condition){
+    if(!$condition){
+        abort();
+    }
 }

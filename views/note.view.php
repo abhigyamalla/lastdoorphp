@@ -6,7 +6,7 @@
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
      
-        <a href="/lastdoorphp/notes.php">Click Here TO Go Back
+        <a href="/lastdoorphp/notes.php" class="text-blue-500">Click Here TO Go Back
       </a>
       
       <p>

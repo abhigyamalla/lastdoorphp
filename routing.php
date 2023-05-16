@@ -1,5 +1,4 @@
 <?php
-$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 
 // $path_to_about = 'C:\xampp\htdocs\lastdoorphp\controller/about.php'; // Replace with the actual path to the about.php file
@@ -23,17 +22,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 //     echo "Page not found<br>"; // Output an error message for debugging purposes
 // }
 
-
-$routes=
-    [
-        '/lastdoorphp/index.php'=>'controller/index.php',
-        '/lastdoorphp/about.php'=>'controller/about.php',
-        '/lastdoorphp/contact.php'=>'controller/contact.php',
-        '/lastdoorphp/notes.php'=>'controller/notes.php',
-        '/lastdoorphp/note.php'=>'controller/note.php',
-
-
-    ];
+$routes=require('routes.php');
 
     
 
@@ -49,12 +38,15 @@ $routes=
     }
     function abort(){
         http_response_code(404);
-        require "views/404.php";
+        require "views/403.php";
         die();
 
     }
 
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
  routeToController($uri,$routes);
+ 
+
 
 
 
